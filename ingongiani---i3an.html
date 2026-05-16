@@ -1,0 +1,2149 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="通过示例学习PHP7">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/zh-php7-juillet-2019/ingongiani---i3an.html">
+      
+      
+        <link rel="prev" href="ihanguuou.html">
+      
+      
+        <link rel="next" href="ehi.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>8. 应用练习 – 第3版 - 通过示例学习PHP7</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "通过示例学习PHP7";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#8-3" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="通过示例学习PHP7" class="md-header__button md-logo" aria-label="通过示例学习PHP7" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            通过示例学习PHP7
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              8. 应用练习 – 第3版
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/zh-php7-juillet-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="通过示例学习PHP7" class="md-nav__button md-logo" aria-label="通过示例学习PHP7" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    通过示例学习PHP7
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/zh-php7-juillet-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欢迎
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="php-7-uen.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. PHP 7 入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="aianaiauaning.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 搭建开发环境
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="php-ihu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. PHP 基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ianii---i-1-anei-2-an.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 练习题 – 第 1 版和第 2 版
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ei.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 类
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ieou.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 接口
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ihanguuou.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. 异常与错误
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. 应用练习 – 第3版
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ingongiani---i3an.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. 应用练习 – 第3版
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1. 脚本目录结构
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82-exceptionimpots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2. [ExceptionImpots] 异常
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#83-taxadmindata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3. [TaxAdminData] 类
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#84-interfaceimpots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4. [InterfaceImpots] 接口
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#85-utilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5. [Utilities] 类
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#86-abstractbaseimpots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6. 抽象类 [AbstractBaseImpots]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#87-impotswithtaxadmindatainjsonfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.7. [ImpotsWithTaxAdminDataInJsonFile] 类
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#88-mainphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.8. [main.php] 脚本
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ehi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. 特质
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="enengingonghengu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. 分层应用程序
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ianii---i4an.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. 练习题 – 第4版
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hiong-mysql-huuuuaniiong.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. 使用 MySQL 数据库管理系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hiianiani----i5an.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. 实践练习——第5版
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ingongiani---i-6-an.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. 应用练习 – 第 6 版
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ingongiani---i7an.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. 应用练习 – 第7版
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="anguoanhu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. 网络函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="web-uu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Web 服务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ianii---i-8-an.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. 练习题 – 第 8 版
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ingongiani---i9an.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19. 应用练习 – 第9版
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ingonghenguiani---i-10-an.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20. 应用程序练习 – 第 10 版
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hui-xml-enang.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    21. 处理 XML 文档
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ingongiani---i-11-an.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    22. 应用练习 – 第 11 版
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hiianiani---i-12-an.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    23. 实践练习 – 第 12 版
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ingongiani---i-13-an.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24. 应用练习 – 第 13 版
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="toc42690276"></a>
+<a id="toc42690662"></a>
+<a id="refheading399101881943603"></a>
+<a id="toc42689890"></a></p>
+<h1 id="8-3">8. <span style="color: #365f91">应用练习 – 第3版</span></h1>
+<p>我们将重新审视之前讲过的练习（<a href="#refheading398861881943603"><u><span style="color: #0563c1">第4.</span></u></a><a href="#refheading398881881943603"><u><span style="color: #0563c1">3节和第4.4节</span></u></a>），并使用采用类的PHP代码来解决它。</p>
+<p><a id="toc42690663"></a>
+<a id="refheadingtoc788112244347140"></a>
+<a id="toc42689891"></a>
+<a id="toc42690277"></a></p>
+<h2 id="81">8.1. <span style="color: #4f81bd"><span style="color: #4f81bd">脚本目录结构</span></span></h2>
+<p><img src="images/10000000000002490000021FB053AF72.png" width="205" height="190" style="width:5.42cm;height:5.031cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002490000021FB053AF72.png" /></p>
+<p><a id="toc42689892"></a>
+<a id="toc42690278"></a>
+<a id="toc42690664"></a>
+<a id="lexceptionexceptionimpots"></a>
+<a id="refheadingtoc55583710956990"></a></p>
+<h2 id="82-exceptionimpots">8.2. <span style="color: #4f81bd">[ExceptionImpots] 异常</span></h2>
+<p>在第 03 版中，当构造函数或类方法遇到错误时，将抛出以下 <strong>[ExceptionImpots]</strong> 异常：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">// namespace</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">namespace</span> <span class="nx">Application</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="k">class</span> <span class="nc">ExceptionImpots</span> <span class="k">extends</span> <span class="nx">\RuntimeException</span> <span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>  <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$message</span><span class="p">,</span> <span class="nx">int</span> <span class="nv">$code</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>    <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">(</span><span class="nv">$message</span><span class="p">,</span> <span class="nv">$code</span><span class="p">);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>  <span class="p">}</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>评论</strong></p>
+<ul>
+  <li>第 4 行：<b>[ExceptionImports]</b> 类位于 <b>[Application]</b> 命名空间中；
+  </li>
+  <li>第 6 行：<b>[ExceptionImpots]</b> 类继承自 PHP 的预定义类 <b>[RuntimeException]</b>；
+  </li>
+  <li>第 8 行：构造函数期望两个参数：
+    <ul>
+      <li><b>$message</b>：是与该异常相关的错误消息；
+      </li>
+      <li><b>$code</b>：是与该异常关联的错误代码。如果未提供，则使用代码 0；
+      </li>
+    </ul>
+  </li>
+</ul>
+<p><a id="toc42689893"></a>
+<a id="toc42690279"></a>
+<a id="toc42690665"></a>
+<a id="laclassetaxadmindata"></a>
+<a id="refheadingtoc55579710956990"></a></p>
+<h2 id="83-taxadmindata">8.3. <span style="color: #4f81bd">[TaxAdminData] 类</span></h2>
+<p>在 02 版本中，税务管理数据首先被收集：</p>
+<ul>
+  <li>首先存储在 JSON 文件中；
+  </li>
+  <li>随后从该 JSON 文件导入关联数组；
+  </li>
+</ul>
+
+<p>在 03 版本中，税务管理数据仍保存在 <strong>[taxadmindata.json]</strong> 文件中，但属性名称有所不同：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
+<span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &quot;limites&quot;<span style="color:#000000">:</span> <span style="color:#000000">[</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        9964<span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        27519<span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        73779<span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        156244<span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#ff0000">0</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">],</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &quot;coeffR&quot;<span style="color:#000000">:</span> <span style="color:#000000">[</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#ff0000">0</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        0.14<span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#ff0000">0.3</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        0.41<span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        0.45</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">],</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &quot;coeffN&quot;<span style="color:#000000">:</span> <span style="color:#000000">[</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#ff0000">0</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        1394.96<span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        5798<span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        13913.69<span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        20163.45</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">],</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &quot;plafondQfDemiPart&quot;<span style="color:#000000">:</span> <span style="color:#ff0000">1551</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &quot;plafondRevenusCelibatairePourReduction&quot;<span style="color:#000000">:</span> <span style="color:#ff0000">21037</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &quot;plafondRevenusCouplePourReduction&quot;<span style="color:#000000">:</span> <span style="color:#ff0000">42074</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &quot;valeurReducDemiPart&quot;<span style="color:#000000">:</span> <span style="color:#ff0000">3797</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &quot;plafondDecoteCelibataire&quot;<span style="color:#000000">:</span> <span style="color:#ff0000">1196</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &quot;plafondDecoteCouple&quot;<span style="color:#000000">:</span> <span style="color:#ff0000">1970</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &quot;plafondImpotCouplePourDecote&quot;<span style="color:#000000">:</span> <span style="color:#ff0000">2627</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &quot;plafondImpotCelibatairePourDecote&quot;<span style="color:#000000">:</span> <span style="color:#ff0000">1595</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &quot;abattementDixPourcentMax&quot;<span style="color:#000000">:</span> <span style="color:#ff0000">12502</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &quot;abattementDixPourcentMin&quot;<span style="color:#000000">:</span> <span style="color:#ff0000">437</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p>在 02 版本中，此文件用于初始化一个关联数组。在 03 版本中，该文件将初始化以下 <strong>[TaxAdminData]</strong> 类：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">namespace </span>Application;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">class </span>TaxAdminData<span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// tax brackets</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold">private </span><span style="color:#0000c0">$limites</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold">private </span><span style="color:#0000c0">$coeffR</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold">private </span><span style="color:#0000c0">$coeffN</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// tax calculation constants</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#008040">private </span>$plafondQfDemiPart<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#008040">private </span>$plafondRevenusCelibatairePourReduction<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#008040">private </span>$plafondRevenusCouplePourReduction<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#008040">private </span>$valeurReducDemiPart<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#008040">private </span>$plafondDecoteCelibataire<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#008040">private </span>$plafondDecoteCouple<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#008040">private </span>$plafondImpotCouplePourDecote<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#008040">private </span>$plafondImpotCelibatairePourDecote<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#008040">private </span>$abattementDixPourcentMax<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#008040">private </span>$abattementDixPourcentMin<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// initialization</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">public </span><span style="font-weight:bold;color:#7f0055">function</span> setFromJsonFile(<span style="font-weight:bold;color:#7f0055">string </span>$taxAdminDataFilename): <span style="color:#005032">TaxAdminData</span> {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// retrieve the contents of the tax data file</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $fileContents = \<span style="font-style:italic">file_get_contents</span>($taxAdminDataFilename);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $erreur = <span style="font-weight:bold;color:#7f0055">FALSE</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// mistake?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">if </span>(!$fileContents) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// we note the error</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $erreur = <span style="font-weight:bold;color:#7f0055">TRUE</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      $message = </span>&quot;Le fichier des données <span style="font-weight:bold">[$taxAdminDataFilename]</span> n&#x27;existe pas&quot;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">if </span>(!$erreur) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// retrieve the jSON code from the configuration file in an associative array</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $arrayTaxAdminData = \<span style="font-style:italic">json_decode</span>($fileContents, <span style="font-weight:bold;color:#7f0055">true</span>);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// mistake?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="font-weight:bold;color:#7f0055">if </span>($arrayTaxAdminData === <span style="font-weight:bold;color:#7f0055">FALSE</span>) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// we note the error</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        $erreur = <span style="font-weight:bold;color:#7f0055">TRUE</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        $message = </span>&quot;Le fichier de données jSON <span style="font-weight:bold">[$taxAdminDataFilename]</span> n&#x27;a pu être exploité correctement&quot;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// mistake?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">if </span>($erreur) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// throw an exception</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="font-weight:bold;color:#7f0055">throw new </span><span style="color:#005032">ExceptionImpots</span>($message);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// initialization of class attributes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">foreach </span>($arrayTaxAdminData <span style="font-weight:bold;color:#7f0055">as </span>$key =&gt; $value) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $this-&gt;$key = $value;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// check that all keys have been initialized</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $arrayOfAttributes = \<span style="font-style:italic">get_object_vars</span>($this);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">foreach </span>($arrayOfAttributes <span style="font-weight:bold;color:#7f0055">as </span>$key =&gt; $value) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="font-weight:bold;color:#7f0055">if </span>(!<span style="font-weight:bold;color:#7f0055">isset</span>($this-&gt;$key)) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">throw new </span><span style="color:#005032">ExceptionImpots</span><span style="color:#000000">(</span>&quot;L&#x27;attribut <span style="font-weight:bold">[$key]</span> de <span style="font-weight:bold">[TaxAdminData]</span> n&#x27;a pas été initialisé&quot;<span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// we check that we only have real values</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">foreach </span>($this <span style="font-weight:bold;color:#7f0055">as </span>$key =&gt; $value) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// $value must be a real number &gt;=0 or an array of reals &gt;=0</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $result = $this-&gt;check($value);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// mistake?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="font-weight:bold;color:#7f0055">if </span>($result-&gt;<span style="color:#0000c0">erreur</span>) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// throw an exception</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">throw new </span><span style="color:#005032">ExceptionImpots</span><span style="color:#000000">(</span>&quot;La valeur de l&#x27;attribut <span style="font-weight:bold">[$key]</span> est invalide&quot;<span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      } <span style="font-weight:bold;color:#7f0055">else </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// we note the value</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        $this-&gt;$key = $result-&gt;<span style="color:#0000c0">value</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// we return the object</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">return </span>$this;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">private </span><span style="font-weight:bold;color:#7f0055">function</span> check($value): \<span style="color:#005032">stdClass</span> {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    …</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">return </span>$result;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// toString</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">public </span><span style="font-weight:bold;color:#7f0055">function</span> __toString() {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// object&#x27;s Json string</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">return </span>\json_encode(\get_object_vars($this), <span style="color:#0000c0">JSON_UNESCAPED_UNICODE</span>);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// getters and setters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">public </span><span style="font-weight:bold;color:#7f0055">function</span> getLimites() {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">return </span>$this-&gt;<span style="color:#0000c0">limites</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">public </span><span style="font-weight:bold;color:#7f0055">function</span> getCoeffR() {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">return </span>$this-&gt;<span style="color:#0000c0">coeffR</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  …</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">public </span><span style="font-weight:bold;color:#7f0055">function</span> setLimites($limites) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $this-&gt;<span style="color:#0000c0">limites</span> = $limites;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">return </span>$this;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">public </span><span style="font-weight:bold;color:#7f0055">function</span> setCoeffR($coeffR) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $this-&gt;<span style="color:#0000c0">coeffR</span> = $coeffR;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">return </span>$this;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  …</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p><strong>评论</strong></p>
+<ul>
+  <li>第 6–20 行：这些属性将存储来自 JSON 文件 <b>[taxadmindata.json] </b>中同名的属性。这一点非常重要：<b>[TaxAdminData]</b> 类的属性与 JSON 文件 <b>[taxadmindata.json]</b> 中的属性完全一致。这一特性使得编写代码变得更加简单；
+  </li>
+  <li><b>[TaxAdminData]</b> 类没有构造函数。在 PHP 中，无法拥有多个构造函数。因此，定义一个构造函数会阻止通过其他任何方式初始化该对象。今后，我们的类将不再拥有构造函数，而是拥有若干 <b>[setFromSomething]</b> 类型的方法，这些方法将允许通过不同方式进行初始化。随后，使用以下表达式构建<b> [TaxAdminData]</b> 类型的对象：
+  </li>
+</ul>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>(new TaxAdminData())→setFromQqChose(…)
+</code></pre></div>
+<ul>
+  <li>第 23 行：<b>[setFromJsonFile]</b> 方法使用 <b>[$jsonFilename]</b> 文件中同名字段的值初始化类属性；
+  </li>
+  <li>第 24–42 行：解析 JSON 文件以构建关联数组 <b>[$arrayTaxAdminData]</b>。我们在版本 02 的 <b>[main.php]</b> 脚本中已经见过这段代码；
+  </li>
+  <li>第 44–47 行：若在处理 JSON 文件时发生错误，将抛出异常。该异常将向上传播至主脚本 <b>[main.php]</b>；
+  </li>
+  <li>第 48–51 行：初始化类属性。此处利用了关联数组 <b>[$arrayTaxAdminData]</b> 与类 <b>[TaxAdminData] </b>的属性名称与 JSON 文件中的值名称完全一致这一特性；
+  </li>
+  <li>第 53–57 行：我们验证 <b>[TaxAdminData]</b> 类的所有属性是否已初始化；
+  </li>
+  <li>第 53 行：表达式 <b>[get_object_vars($this)]</b> 返回一个关联数组，其属性即对象 <b>[$this] </b>的属性，也就是 <b>[TaxAdminData]</b> 类的属性。这里需要理解的是，第 48–51 行的初始化过程可能已向对象 <b>[$this]</b> 添加了属性。因此，如果我们写：
+  </li>
+</ul>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    $this-&gt;x = &quot;1000&quot;;
+</code></pre></div>
+<p>那么属性 <strong>[x]</strong> 就会被添加到对象 <strong>[$this]</strong> 中，即使该属性并未在 <strong>[TaxAdminData]</strong> 类中声明。 可以确定的是，第 6–20 行中的属性确实属于对象 <strong>[$this]</strong>，但它们可能尚未被初始化。这是一个很容易犯的错误；只需在 <strong>[taxadmindata.json]</strong> 文件中的属性名称中出现一个拼写错误即可；</p>
+<ul>
+  <li>第 54–57 行：我们遍历 <b>[$this] </b>的所有属性，如果其中任何一个未被初始化，则抛出异常；
+  </li>
+  <li>属性可能被初始化为错误的值。在 PHP 中，无法为属性指定类型。因此，以下操作：
+  </li>
+</ul>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$this→plafondQfDemiPart=’abcd’
+</code></pre></div>
+<p>是可行的，尽管 <strong>[$plafondQfDemiPart]</strong> 属性应为实数；</p>
+<ul>
+  <li>第 59–71 行：我们验证该类的每个属性值均为正实数或零。第 76 行的 <b>[check]</b> 函数负责执行此任务。其参数 <b>[$value]</b> 可以是单个值，也可以是值的数组；
+  </li>
+  <li>第 62 行：<b>[check]</b> 函数返回一个类型为 <b>[\stdClass] </b>的对象，该对象具有两个属性：
+    <ul>
+      <li><b>[error]</b>：若发生错误则为 TRUE，否则为 FALSE；
+      </li>
+      <li><b>[value]</b>：与第62行传入的<b>[$value]</b>参数对应的实际数值；
+      </li>
+    </ul>
+  </li>
+  <li>第 64 行：检查验证是否成功；
+  </li>
+  <li>第 66 行：如果某个属性不是正实数或零，则抛出异常；
+  </li>
+  <li>第 69 行：否则，记录其数值；
+  </li>
+  <li>第 73 行：将对象 <b>[$this]</b> 作为结果返回；
+  </li>
+</ul>
+
+<p><strong>[check]</strong> 函数如下：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#008040">private </span><span style="font-weight:bold;color:#7f0055">function</span> check($value): \<span style="color:#005032">stdClass</span> {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// $value est soit un tableau d&#x27;éléments soit un unique élément</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// on crée un tableau</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">if </span>(!\<span style="font-style:italic">is_array</span>($value)) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $tableau = <span style="font-weight:bold">[$value]</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    } <span style="font-weight:bold;color:#7f0055">else </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $tableau = $value;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// on transforme le tableau d&#x27;éléments de type non connu en tableau de réels</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $newTableau = [];</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $result = <span style="font-weight:bold;color:#7f0055">new </span>\<span style="color:#005032">stdClass</span>();</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// les éléments du tableau doivent être des nombres décimaux positifs ou nuls</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    $modèle = </span>&#x27;/^\s*(<span style="font-weight:bold">[+]</span>?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/&#x27;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">for </span>($i = 0; $i &lt; <span style="font-style:italic">count</span>($tableau); $i ++) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="font-weight:bold;color:#7f0055">if </span>(<span style="font-style:italic">preg_match</span>($modèle, $tableau<span style="font-weight:bold">[$i]</span>)) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// on met le float dans newTableau</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        $newTableau[] = (float) $tableau[$i];</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      } <span style="font-weight:bold;color:#7f0055">else </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// on note l&#x27;erreur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        $result-&gt;<span style="color:#0000c0">erreur</span> = <span style="font-weight:bold;color:#7f0055">TRUE</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// on quitte</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-weight:bold;color:#7f0055">return </span>$result;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// on rend le résultat</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $result-&gt;<span style="color:#0000c0">erreur</span> = <span style="font-weight:bold;color:#7f0055">FALSE</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">if </span>(!\<span style="font-style:italic">is_array</span>($value)) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// une seule valeur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $result-&gt;<span style="color:#0000c0">value</span> = $newTableau<span style="font-weight:bold">[0]</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    } <span style="font-weight:bold;color:#7f0055">else </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// une liste de valeurs</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $result-&gt;<span style="color:#0000c0">value</span> = $newTableau;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">return </span>$result;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+</code></pre></div>
+
+<p><strong>注释</strong></p>
+<ul>
+  <li>第 1 行：参数 <b>[$value]</b> 可以是数组，也可以是单个元素。此外，其类型未知。该值来自文件 <b>[taxadmindata.json]</b>。根据该文件中输入的值，读取到的值可以是整数、实数、字符串或布尔值。例如：
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">&quot;plafondQfDemiPart&quot;<span style="color:#000000">:</span> <span style="color:#ff0000">1551</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&quot;plafondQfDemiPart&quot;<span style="color:#000000">:</span> <span style="color:#ff0000">1551.78</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&quot;plafondQfDemiPart&quot;<span style="color:#000000">:</span> &quot;<span style="color:#ff0000">1551</span>&quot;<span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&quot;plafondQfDemiPart&quot;<span style="color:#000000">:</span> &quot;<span style="color:#ff0000">xx</span>&quot;<span style="color:#000000">,</span></span></span>
+</code></pre></div>
+
+<p>在情况 1 中，该值为 <strong>[整数]</strong> 类型；在情况 2 中为 <strong>[浮点数]</strong> 类型；在情况 3 中为可转换为数字的 <strong>[字符串]</strong> 类型；在情况 4 中为无法转换为数字的 <strong>[字符串]</strong> 类型；</p>
+<ul>
+  <li>第 4–8 行：我们根据第 1 行接收到的 <b>[$value]</b> 参数创建一个数组；
+  </li>
+  <li>第 10 行：该数组将填充实数；
+  </li>
+  <li>第 11 行：结果将是一个类型为 <b>[\stdClass] </b>的对象；
+  </li>
+  <li>第 13 行：用于判断是否为正数或零的实数的关系表达式；
+  </li>
+  <li>第 14–24 行：我们验证数组 <b>[$tableau] </b>的所有元素是否均为正数或零，并将这些元素转换为 <b>[float]</b> 类型后填入数组 <b>[$newTableau]</b>（第 17 行）；
+  </li>
+  <li>第 18–23 行：一旦检测到某个元素不是正数或零，就会在结果中记录该错误并返回结果；
+  </li>
+  <li>第 25–34 行：数组 <b>[$tableau] </b>的所有元素均被判定为有效的特例；
+  </li>
+  <li>第 32 行：返回值 <b>[$result→value]</b> 是一个<b>浮点数</b>数组或单个浮点数；
+  </li>
+</ul>
+
+<p>第 82–85 行中的 <strong>[__toString]</strong> 函数返回对象 <strong>[$this]</strong> 的属性和值的 JSON 字符串。</p>
+<p>第 87–110 行：类的 getter 和 setter 方法；</p>
+<p><strong>注意</strong>：为类编写所有 get/set 方法有时会比较繁琐，尤其是当属性较多时。NetBeans 可以自动生成这些方法以及构造函数。要实现这一点，只需选择属性 <strong>[1]</strong>：</p>
+<p><img src="images/10000000000007BA00000243E50398B4.png" width="593" height="174" style="width:15.7cm;height:4.597cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007BA00000243E50398B4.png" /></p>
+<ul>
+  <li>在 <b>[2] </b>中，右键单击您希望插入代码的位置，然后选择 <b>[插入代码]</b> 选项；
+  </li>
+</ul>
+
+<p><img src="images/10000000000006930000031804EDF215.png" width="505" height="238" style="width:13.36cm;height:6.287cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006930000031804EDF215.png" /></p>
+<ul>
+  <li>在 <b>[4] </b>中，指定要生成构造函数；
+  </li>
+  <li>在 <b>[5] </b>中，勾选所有属性：这意味着您希望构造函数为每个属性都提供一个参数；
+  </li>
+  <li>在 <b>[6] </b>中，选择 Java 构造函数样式；
+  </li>
+  <li>在 <b>[7] </b>中，指定要在构造函数前显式添加 <b>[public]</b> 关键字；
+  </li>
+  <li>在 <b>[8] </b>中，点击“确定”；
+  </li>
+</ul>
+
+<p><img src="images/10000000000007AF000001DE4E4FF9EE.png" width="590" height="143" style="width:15.61cm;height:3.792cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007AF000001DE4E4FF9EE.png" /></p>
+<ul>
+  <li>在 <b>[9] </b>中，NetBeans 已生成构造函数。但由于它不知道参数类型，因此无法指定。请自行添加 <b>[10]</b>；
+  </li>
+</ul>
+
+<p>要生成 getter 和 setter 方法，请重复步骤 2–4，并在步骤 4 中选择 <strong>[Getter 和 Setter]</strong>：</p>
+<p><img src="images/100000000000066C000003539DFC9D5F.png" width="493" height="255" style="width:13.049cm;height:6.756cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000066C000003539DFC9D5F.png" /></p>
+<ul>
+  <li>在 <b>[5] </b>中，指定希望为每个属性提供 getter 和 setter 方法；
+  </li>
+  <li>在 <b>[6] </b>中，指定希望采用 Java 风格的 getter 和 setter：setAttribute、getAttribute；
+  </li>
+  <li>在 <b>[7] </b>中，指定这些 getter 和 setter 应为 public；
+  </li>
+  <li>在 <b>[8] </b>中，点击“确定”；
+  </li>
+</ul>
+
+<p><img src="images/1000000000000723000003565E698006.png" width="548" height="256" style="width:14.499cm;height:6.777cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000723000003565E698006.png" /></p>
+<ul>
+  <li>在 <b>[9] </b>中，NetBeans 生成的 getter 和 setter 方法；
+  </li>
+</ul>
+
+<p>删除这些 getter 和 setter 方法，然后重复步骤 2–7。</p>
+<ul>
+  <li>在 <b>[8] </b>中，勾选之前未勾选的 <b>[Fluent Setter]</b> 选项；
+  </li>
+</ul>
+
+<p>结果如下：</p>
+<p><img src="images/10000000000002F700000225008C90F4.png" width="228" height="165" style="width:6.02cm;height:4.353cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002F700000225008C90F4.png" /></p>
+<p>每个设置器都以 <strong>[return $this]</strong> 操作结尾。这使得属性能够按如下方式初始化：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$data→setLimites($limites)→setCoeffR($coeffR)→setCoeffN($coeffN) ;
+</code></pre></div>
+<p>实际上，<strong>[$data→setLimites($limites)]</strong>（代码第 32 行）的返回值是 <strong>[$this]</strong>，因此这里是 <strong>[$data]</strong>。 因此，我们可以调用该对象的 <strong>[setCoeffR($coeffR)]</strong> 方法，以此类推，因为该方法同样返回 <strong>[$this]</strong>（代码第 37 行）。这种编写类方法的风格——即本应返回空值的方法改为返回对象 <strong>[$this]</strong>——被称为<strong>流畅式</strong>编程。这使得这些方法更易于使用。</p>
+<p><a id="toc42690666"></a>
+<a id="refheadingtoc55581710956990"></a>
+<a id="toc42689894"></a>
+<a id="toc42690280"></a></p>
+<h2 id="84-interfaceimpots">8.4. <span style="color: #4f81bd">[InterfaceImpots] 接口</span></h2>
+<p>现在，我们定义以下 <strong>[InterfaceImpots]</strong> 接口 <strong>[InterfaceImpots.php]</strong>：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// namespace</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">namespace </span>Application;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">interface </span>InterfaceImpots<span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// retrieve tax bracket data for tax calculations</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// can throw the ExceptionImpots exception</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">public </span><span style="font-weight:bold;color:#7f0055">function</span> getTaxAdminData(): <span style="color:#005032">TaxAdminData</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the interface knows how to calculate a tax</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">public </span><span style="font-weight:bold;color:#7f0055">function</span> calculerImpot(<span style="font-weight:bold;color:#7f0055">string </span>$marié, <span style="font-weight:bold;color:#7f0055">int </span>$enfants, <span style="font-weight:bold;color:#7f0055">int </span>$salaire): <span style="font-weight:bold;color:#7f0055">array</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the interface can process data in text files</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $usersFilename: user data file in the form of marital status, number of children, annual salary</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $resultsFilename: results file with marital status, number of children, annual salary, tax amount</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $errorsFilename: file of errors encountered</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// can throw the ExceptionImpots exception</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">public </span><span style="font-weight:bold;color:#7f0055">function</span> executeBatchImpots(<span style="font-weight:bold;color:#7f0055">string </span>$usersFileName, <span style="font-weight:bold;color:#7f0055">string </span>$resultsFileName, <span style="font-weight:bold;color:#7f0055">string </span>$errorsFileName): <span style="font-weight:bold;color:#7f0055">void</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+</code></pre></div>
+
+<p><strong>注释</strong></p>
+<ul>
+  <li>第 4 行：该接口位于 <b>[Application]</b> 命名空间中；
+  </li>
+  <li>第 6 行：用于计算税款的接口；
+  </li>
+  <li>第 10 行：<b>[getTaxAdminData]</b> 方法将从税务管理部门检索数据，并将其装入我们刚刚引入的 <b>[TaxAdminData]</b> 类型的对象中。由于这些数据可能位于文件、数据库甚至网络中，因此 <b>[getTaxAdminData]</b> 方法可能会检索失败。 此时，它将抛出 <b>[ExceptionImpots]</b> 异常。这是面向对象编程中用于指示方法或构造函数中遇到错误的标准方法；
+  </li>
+  <li>第 13 行：<b>[calculateTax]</b> 方法将计算用户的税款；
+  </li>
+  <li>第 20 行：<b>[executeBatchImpots]</b> 方法将计算多个纳税人的税款：
+    <ul>
+      <li><b>[$usersFileName] </b>是包含纳税人数据的文本文件名；
+      </li>
+      <li><b>[$resultsFileName] </b>是包含这些纳税人税额的文本文件名；
+      </li>
+      <li><b>[$errorsFileName] </b>是包含处理这些文件时遇到的错误信息的文本文件名；
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>文本文件 <strong>[$usersFileName]</strong> 的内容可能如下所示：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">oui,2,55555</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">oui,2,50000</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">oui,3,50000</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">non,2,100000</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">non,3<span style="font-weight:bold;color:#c9211e">x</span>,100000</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">oui,3,100000</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">oui,5,100000<span style="font-weight:bold;color:#c9211e">x</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">non,0,100000</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">oui,2,30000</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">non,0,200000</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">oui,3,200000</span></span>
+</code></pre></div>
+
+<p>请注意，第 5 行和第 7 行包含错误的条目。</p>
+<p>文本文件 <strong>[$resultsFileName]</strong> 的内容将如下所示：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span>
+<span class="normal"><a href="#__codelineno-5-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>{&quot;marié&quot;:&quot;oui&quot;,&quot;enfants&quot;:2,&quot;salaire&quot;:55555,&quot;impôt&quot;:2814,&quot;surcôte&quot;:0,&quot;décôte&quot;:0,&quot;réduction&quot;:0,&quot;taux&quot;:0.14}
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>{&quot;marié&quot;:&quot;oui&quot;,&quot;enfants&quot;:2,&quot;salaire&quot;:50000,&quot;impôt&quot;:1384,&quot;surcôte&quot;:0,&quot;décôte&quot;:384,&quot;réduction&quot;:347,&quot;taux&quot;:0.14}
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>{&quot;marié&quot;:&quot;oui&quot;,&quot;enfants&quot;:3,&quot;salaire&quot;:50000,&quot;impôt&quot;:0,&quot;surcôte&quot;:0,&quot;décôte&quot;:720,&quot;réduction&quot;:0,&quot;taux&quot;:0.14}
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>{&quot;marié&quot;:&quot;non&quot;,&quot;enfants&quot;:2,&quot;salaire&quot;:100000,&quot;impôt&quot;:19884,&quot;surcôte&quot;:4480,&quot;décôte&quot;:0,&quot;réduction&quot;:0,&quot;taux&quot;:0.41}
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>{&quot;marié&quot;:&quot;oui&quot;,&quot;enfants&quot;:3,&quot;salaire&quot;:100000,&quot;impôt&quot;:9200,&quot;surcôte&quot;:2180,&quot;décôte&quot;:0,&quot;réduction&quot;:0,&quot;taux&quot;:0.3}
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>{&quot;marié&quot;:&quot;non&quot;,&quot;enfants&quot;:0,&quot;salaire&quot;:100000,&quot;impôt&quot;:22986,&quot;surcôte&quot;:0,&quot;décôte&quot;:0,&quot;réduction&quot;:0,&quot;taux&quot;:0.41}
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>{&quot;marié&quot;:&quot;oui&quot;,&quot;enfants&quot;:2,&quot;salaire&quot;:30000,&quot;impôt&quot;:0,&quot;surcôte&quot;:0,&quot;décôte&quot;:0,&quot;réduction&quot;:0,&quot;taux&quot;:0}
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>{&quot;marié&quot;:&quot;non&quot;,&quot;enfants&quot;:0,&quot;salaire&quot;:200000,&quot;impôt&quot;:64210,&quot;surcôte&quot;:7498,&quot;décôte&quot;:0,&quot;réduction&quot;:0,&quot;taux&quot;:0.45}
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a>{&quot;marié&quot;:&quot;oui&quot;,&quot;enfants&quot;:3,&quot;salaire&quot;:200000,&quot;impôt&quot;:42842,&quot;surcôte&quot;:17283,&quot;décôte&quot;:0,&quot;réduction&quot;:0,&quot;taux&quot;:0.41}
+</code></pre></div></td></tr></table></div>
+<p>而文本文件 <strong>[$errorsFileName]</strong> 中的内容如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>la ligne 5 du fichier taxpayersdata.txt est erronée
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>la ligne 7 du fichier taxpayersdata.txt est erronée
+</code></pre></div></td></tr></table></div>
+<p><a id="toc42689895"></a>
+<a id="toc42690281"></a>
+<a id="toc42690667"></a>
+<a id="laclasseutilitaires"></a>
+<a id="refheadingtoc55585710956990"></a></p>
+<h2 id="85-utilities">8.5. <span style="color: #4f81bd">[Utilities] 类</span></h2>
+<p>我们<strong>还在名为 [Utilities.php]</strong> 的文件中定义了一个 <strong>[Utilities]</strong> 类：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// namespace</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">namespace </span>Application;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// a class of utility functions</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">abstract class <span style="color:#005032">Utilitaires</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008040">public </span>static function<span style="color:#000000"> </span><span style="font-style:italic;color:#000000">cutNewLinechar</span><span style="color:#000000">(</span>string <span style="color:#000000">$ligne): </span>string <span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// delete the end-of-line mark from $ligne if it exists</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $longueur = strlen($ligne);  // line length</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">while </span>(<span style="font-style:italic">substr</span>($ligne, $longueur - 1, 1) == <span style="color:#0000c0">&quot;\n&quot; </span>or <span style="font-style:italic">substr</span>($ligne, $longueur - 1, 1) == <span style="color:#0000c0">&quot;\r&quot;</span>) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $ligne = <span style="font-style:italic">substr</span>($ligne, 0, $longueur - 1);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $longueur--;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// end - return the line</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">return</span>($ligne);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+</code></pre></div>
+
+<p><strong>评论</strong></p>
+<ul>
+  <li>第 4 行：<b>[Utilities]</b> 类也被放置在 <b>[Examples]</b> 命名空间中；
+  </li>
+  <li>第 9 行：<b>[cutNewLineChar]</b> 方法会从作为参数传递的文本中移除任何换行符，并返回由此形成的新行。请注意，这是一个<b>静态</b>方法，这意味着它将以 <b>[Utilities::cutNewLineChar] </b>的形式被调用；
+  </li>
+</ul>
+<p><a id="toc42689896"></a>
+<a id="toc42690282"></a>
+<a id="toc42690668"></a>
+<a id="laclasseabstraite"></a>
+<a id="refheadingtoc55587710956990"></a></p>
+<h2 id="86-abstractbaseimpots">8.6. <span style="color: #4f81bd">抽象类 [AbstractBaseImpots]</span></h2>
+<p>接口 <strong>[InterfaceImpots]</strong> 将由以下抽象类 <strong>[AbstractBaseImpots]</strong> 实现 <strong>[AbstractBaseImpots.php]</strong>：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// namespace</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">namespace </span>Application;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// definition of an abstract class AbstractBaseImpots</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">abstract class </span>AbstractBaseImpots<span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">implements </span>InterfaceImpots<span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// tax administration data</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#008040">private </span>$taxAdminData<span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">NULL</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// data required for tax calculation</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#7f0055">abstract function</span> getTaxAdminData(): <span style="color:#005032">TaxAdminData</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// tAX CALCULATION</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// --------------------------------------------------------------------------</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">public </span><span style="font-weight:bold;color:#7f0055">function</span> calculerImpot(<span style="font-weight:bold;color:#7f0055">string </span>$marié, <span style="font-weight:bold;color:#7f0055">int </span>$enfants, <span style="font-weight:bold;color:#7f0055">int </span>$salaire): <span style="font-weight:bold;color:#7f0055">array </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// $marié : yes, no</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// $enfants : number of children</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// $salaire: annual salary</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// $this-&gt;taxAdminData: tax administration data</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#557f5f">//</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// we check that we have the correct data from the tax authorities</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">if </span>($this-&gt;<span style="color:#0000c0">taxAdminData</span> === <span style="font-weight:bold;color:#7f0055">NULL</span>) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $this-&gt;<span style="color:#0000c0">taxAdminData</span> = $this-&gt;getTaxAdminData();</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// tax calculation with children</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $result1 = $this-&gt;calculerImpot2($marié, $enfants, $salaire);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $impot1 = $result1<span style="font-weight:bold">[&quot;impôt&quot;]</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// tax calculation without children</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">if </span>($enfants != 0) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $result2 = $this-&gt;calculerImpot2($marié, 0, $salaire);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $impot2 = $result2<span style="font-weight:bold">[&quot;impôt&quot;]</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// application of the family allowance ceiling</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $plafonDemiPart = $this-&gt;<span style="color:#0000c0">taxAdminData</span>-&gt;getPlafondQfDemiPart();</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="font-weight:bold;color:#7f0055">if </span>($enfants &lt; 3) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// $PLAFOND_QF_DEMI_PART euros for the first 2 children</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        $impot2 = $impot2 - $enfants * $plafonDemiPart;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      } <span style="font-weight:bold;color:#7f0055">else </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// $PLAFOND_QF_DEMI_PART euros for the first 2 children, double for subsequent children</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        $impot2 = $impot2 - 2 * $plafonDemiPart - ($enfants - 2) * 2 * $plafonDemiPart;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    } <span style="font-weight:bold;color:#7f0055">else </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $impot2 = $impot1;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $result2 = $result1;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// we take the highest tax</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">if </span>($impot1 &gt; $impot2) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $impot = $impot1;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $taux = $result1<span style="font-weight:bold">[&quot;taux&quot;]</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $surcôte = $result1<span style="font-weight:bold">[&quot;surcôte&quot;]</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    } <span style="font-weight:bold;color:#7f0055">else </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $surcôte = $impot2 - $impot1 + $result2<span style="font-weight:bold">[&quot;surcôte&quot;]</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $impot = $impot2;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $taux = $result2<span style="font-weight:bold">[&quot;taux&quot;]</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// calculation of any discount</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $décôte = $this-&gt;getDecôte($marié, $salaire, $impot);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $impot -= $décôte;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// calculation of any tax reduction</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $réduction = $this-&gt;getRéduction($marié, $salaire, $enfants, $impot);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $impot -= $réduction;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f0055">return </span>[&quot;impôt&quot; =&gt; floor($impot), &quot;surcôte&quot; =&gt; $surcôte, &quot;décôte&quot; =&gt; $décôte, &quot;réduction&quot; =&gt; $réduction, &quot;taux&quot; =&gt; $taux];</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// --------------------------------------------------------------------------</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">private </span><span style="font-weight:bold;color:#7f0055">function</span> calculerImpot2(<span style="font-weight:bold;color:#7f0055">string </span>$marié, <span style="font-weight:bold;color:#7f0055">int </span>$enfants, <span style="font-weight:bold;color:#7f0055">float </span>$salaire): <span style="font-weight:bold;color:#7f0055">array </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    …</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f0055">return </span>[&quot;impôt&quot; =&gt; $impôt, &quot;surcôte&quot; =&gt; $surcôte, &quot;taux&quot; =&gt; $coeffR[$i]];</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// revenuImposable=annualwage-discount</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the allowance has a minimum and a maximum</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">private </span><span style="font-weight:bold;color:#7f0055">function</span> getRevenuImposable(<span style="font-weight:bold;color:#7f0055">float </span>$salaire): <span style="font-weight:bold;color:#7f0055">float </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    …</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">return </span><span style="font-style:italic">floor</span>($revenuImposable);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// calculates any discount</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">private </span><span style="font-weight:bold;color:#7f0055">function</span> getDecôte(<span style="font-weight:bold;color:#7f0055">string </span>$marié, <span style="font-weight:bold;color:#7f0055">float </span>$salaire, <span style="font-weight:bold;color:#7f0055">float </span>$impots): <span style="font-weight:bold;color:#7f0055">float </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    …</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">return </span><span style="font-style:italic">ceil</span>($décôte);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// calculates any reduction</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">private </span><span style="font-weight:bold;color:#7f0055">function</span> getRéduction(<span style="font-weight:bold;color:#7f0055">string </span>$marié, <span style="font-weight:bold;color:#7f0055">float </span>$salaire, <span style="font-weight:bold;color:#7f0055">int </span>$enfants, <span style="font-weight:bold;color:#7f0055">float </span>$impots): <span style="font-weight:bold;color:#7f0055">float </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    …</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">return </span><span style="font-style:italic">ceil</span>($réduction);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">public </span><span style="font-weight:bold;color:#7f0055">function</span> executeBatchImpots(<span style="font-weight:bold;color:#7f0055">string </span>$usersFileName, <span style="font-weight:bold;color:#7f0055">string </span>$resultsFileName, <span style="font-weight:bold;color:#7f0055">string </span>$errorsFileName): <span style="font-weight:bold;color:#7f0055">void </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    …</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+</code></pre></div>
+
+<p><strong>评论</strong></p>
+<ul>
+  <li>第 4 行：<b>[AbstractBaseImpots]</b> 类将位于 <b>[Application]</b> 命名空间中，与当前正在编写的应用中的其他元素一样；
+  </li>
+  <li>第 7 行：<b>[AbstractBaseImpots]</b> 类实现了 <b>[InterfaceImpots]</b> 接口；
+  </li>
+  <li>第 9 行：税务管理数据将存放在 <b>[$taxAdminData]</b> 属性中<b>；</b>
+  </li>
+  <li>第 12 行：实现接口的 <b>[getTaxAdminData]</b> 方法。我们目前尚不清楚如何定义此方法：<a href="#version2"><u><span style="color: #0563c1">在前一节中</span></u></a>，我们看到过一个示例，其中税务管理数据是从 JSON 文件中获取的。 接下来我们将探讨另一种情况，即从数据库中检索数据。具体如何定义 <b>[getTaxAdminData]</b> 方法的内容将由派生类决定。前两种情况将分别产生两个派生类。因此，<b>[getTaxAdminData]</b> 方法被声明为抽象方法，这会自动使该类本身成为抽象类（第 7 行）；
+  </li>
+  <li>第 15–64 行：此前在 <a href="#version1"><u><span style="color: #0563c1">link</span></u></a> 和 <a href="#version2"><u><span style="color: #0563c1">link</span></u></a> 章节中已见过的税款计算函数； 
+  </li>
+  <li>版本 02 将税务管理数据存储在关联数组 <b>[$taxAdminData] </b>中。版本 03 将其存储在属性 <b>[$this→taxAdminData] </b>中。这两种方法之间的第一个区别在于税务数据的可见性：
+    <ul>
+      <li>在 02 版本中，关联数组 <b>[$taxAdminData]</b> 没有全局可见性。因此，它被作为参数传递给所有税费计算函数；
+      </li>
+      <li>在版本 03 中，属性 <b>[$this→taxAdminData] </b>对类的所有方法都具有全局可见性。因此，它不再作为参数传递给所有税费计算函数；
+      </li>
+    </ul>
+  </li>
+  <li>第二个区别源于版本 03 将函数替换为类方法。现在，每次方法调用都使用表达式 <b>[$this→getMethod(…)]</b> 进行（第 27、31、57、60 行）；
+  </li>
+  <li>第三个区别在于，当 <b>[calculateTax]</b> 方法开始工作时，它并不知道其所需的 <b>[private $taxAdminData]</b> 属性是否已被初始化。这是因为类构造函数并未对其进行初始化。 因此，<b>[calculateTax]</b> 方法需要通过第 12 行的 <b>[getTaxAdminData]</b> 方法自行完成初始化。第 23–25 行正是为此而设计的；
+  </li>
+  <li>除上述差异外，税费计算方法与之前版本保持一致；
+  </li>
+</ul>
+
+<p><strong>[executeBatchImpots]</strong> 函数如下：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#008040">public </span><span style="font-weight:bold;color:#7f0055">function</span> executeBatchImpots(<span style="font-weight:bold;color:#7f0055">string </span>$usersFileName, <span style="font-weight:bold;color:#7f0055">string </span>$resultsFileName, <span style="font-weight:bold;color:#7f0055">string </span>$errorsFileName): <span style="font-weight:bold;color:#7f0055">void </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// pas mal d&#x27;erreurs peuvent se produire dès qu&#x27;on gère des fichiers</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">try </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// ouverture fichier des erreurs</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $errors = <span style="font-style:italic">fopen</span>($errorsFileName, <span style="color:#0000c0">&quot;w&quot;</span>);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="font-weight:bold;color:#7f0055">if </span>(!$errors) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">throw new </span><span style="color:#005032">ExceptionImpots</span><span style="color:#000000">(</span>&quot;Impossible de créer le fichier des erreurs <span style="font-weight:bold">[$errorsFileName]</span>&quot;<span style="color:#000000">, 10);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// ouverture fichier des résultats</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $results = <span style="font-style:italic">fopen</span>($resultsFileName, <span style="color:#0000c0">&quot;w&quot;</span>);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="font-weight:bold;color:#7f0055">if </span>(!$results) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">throw new </span><span style="color:#005032">ExceptionImpots</span><span style="color:#000000">(</span>&quot;Impossible de créer le fichier des résultats <span style="font-weight:bold">[$resultsFileName]</span>&quot;<span style="color:#000000">, 11);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// lecture des données utilisateur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// chaque ligne a la forme statut marital, nombre d&#x27;enfants, salaire annuel</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $data = <span style="font-style:italic">fopen</span>($usersFileName, <span style="color:#0000c0">&quot;r&quot;</span>);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="font-weight:bold;color:#7f0055">if </span>(!$data) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">throw new </span><span style="color:#005032">ExceptionImpots</span><span style="color:#000000">(</span>&quot;Impossible d&#x27;ouvrir en lecture les déclarations des contribuables <span style="font-weight:bold">[$usersFileName]</span>&quot;<span style="color:#000000">, 12);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// on exploite la ligne courante du fichier des données utilisateur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// qui a la forme statut marital, nombre d&#x27;enfants, salaire annuel</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      $num = 1;         <span style="color:#557f5f">// n° ligne courante</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      $nbErreurs = 0;   </span>// nbre d&#x27;erreurs rencontrées</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="font-weight:bold;color:#7f0055">while </span>($ligne = <span style="font-style:italic">fgets</span>($data, 100)) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#557f5f">// debug</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">//  print &quot;ligne n° &quot; . ($i + 1) . &quot; : &quot; . $ligne;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// on enlève l&#x27;éventuelle marque de fin de ligne</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        $ligne = <span style="color:#005032">Utilitaires</span>::<span style="font-style:italic">cutNewLineChar</span>($ligne);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// on récupère les 3 champs marié:enfants:salaire qui forment $ligne</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-weight:bold;color:#7f0055">list</span>($marié, $enfants, $salaire) = <span style="font-style:italic">explode</span>(<span style="color:#0000c0">&quot;,&quot;</span>, $ligne);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// on les vérifie</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// le statut marital doit être oui ou non</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        $marié = <span style="font-style:italic">trim</span>(<span style="font-style:italic">strtolower</span>($marié));</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        $erreur = ($marié !== <span style="color:#0000c0">&quot;oui&quot; </span>and $marié !== <span style="color:#0000c0">&quot;non&quot;</span>);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-weight:bold;color:#7f0055">if </span>(!$erreur) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// le nombre d&#x27;enfants doit être un entier</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          $enfants = <span style="font-style:italic">trim</span>($enfants);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="font-weight:bold;color:#7f0055">if </span>(!<span style="font-style:italic">preg_match</span>(<span style="color:#0000c0">&quot;/^\s*\d+\s*$/&quot;</span>, $enfants)) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            $erreur = <span style="font-weight:bold;color:#7f0055">TRUE</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          } <span style="font-weight:bold;color:#7f0055">else </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            $enfants = (int) $enfants;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-weight:bold;color:#7f0055">if </span>(!$erreur) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// le salaire est un entier sans les centimes d&#x27;euros</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          $salaire = <span style="font-style:italic">trim</span>($salaire);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="font-weight:bold;color:#7f0055">if </span>(!<span style="font-style:italic">preg_match</span>(<span style="color:#0000c0">&quot;/^\s*\d+\s*$/&quot;</span>, $salaire)) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            $erreur = <span style="font-weight:bold;color:#7f0055">TRUE</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          } <span style="font-weight:bold;color:#7f0055">else </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            $salaire = (int) $salaire;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// erreur ?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-weight:bold;color:#7f0055">if </span>($erreur) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="font-style:italic;color:#000000">fputs</span><span style="color:#000000">($errors, </span>&quot;la ligne <span style="font-weight:bold">[$num]</span> du fichier <span style="font-weight:bold">[$usersFileName]</span> est erronée\n&quot;<span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          $nbErreurs++;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        } <span style="font-weight:bold;color:#7f0055">else </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// on calcule l&#x27;impôt</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          $result = $this-&gt;calculerImpot($marié, (int) $enfants, (int) $salaire);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// on inscrit le résultat dans le fichier des résultats</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          $result = [&quot;marié&quot; =&gt; $marié, &quot;enfants&quot; =&gt; $enfants, &quot;salaire&quot; =&gt; $salaire] + $result;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="font-style:italic">fputs</span>($results, \<span style="font-style:italic">json_encode</span>($result, <span style="font-style:italic;color:#0000c0">JSON_UNESCAPED_UNICODE</span>) . <span style="color:#0000c0">&quot;\n&quot;</span>);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// ligne suivante</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        $num++;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// des erreurs ?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="font-weight:bold;color:#7f0055">if </span>($nbErreurs &gt; 0) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">throw new </span><span style="color:#005032">ExceptionImpots</span><span style="color:#000000">(</span>&quot;Il y a eu des erreurs&quot;<span style="color:#000000">, 15);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    } </span><span style="font-weight:bold;color:#7f0055">catch </span><span style="color:#000000">(</span>ExceptionImpots<span style="color:#000000"> $ex) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// on relance l&#x27;exception</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="font-weight:bold;color:#7f0055">throw </span>$ex;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    } </span>finally <span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// on ferme tous les fichiers</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="font-style:italic">fclose</span>($data);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="font-style:italic">fclose</span>($results);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="font-style:italic">fclose</span>($errors);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+</code></pre></div>
+
+<p><strong>代码注释</strong></p>
+<ul>
+  <li>第 1 行：该函数接受三个参数：
+    <ul>
+      <li><b>[$usersFileName]</b>：包含纳税人数据的文本文件名称。文本中的每一行都以以下格式包含一名纳税人的数据：婚姻状况（是/否）、子女数量、年薪：
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>oui,2,55555
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>oui,2,50000
+</code></pre></div></td></tr></table></div>
+<ul>
+  <li>（续）
+    <ul>
+      <li><b>[$resultsFileName]</b>：将包含结果的文本文件名称。每行文本将采用以下格式：
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>{&quot;marié&quot;:&quot;oui&quot;,&quot;enfants&quot;:2,&quot;salaire&quot;:50000,&quot;impôt&quot;:1384,&quot;surcôte&quot;:0,&quot;décôte&quot;:384,&quot;réduction&quot;:347,&quot;taux&quot;:0.14}
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>{&quot;marié&quot;:&quot;oui&quot;,&quot;enfants&quot;:3,&quot;salaire&quot;:50000,&quot;impôt&quot;:0,&quot;surcôte&quot;:0,&quot;décôte&quot;:720,&quot;réduction&quot;:0,&quot;taux&quot;:0.14}
+</code></pre></div></td></tr></table></div>
+<ul>
+  <li>（续）
+    <ul>
+      <li><b>[$errorsFileName]</b>：包含错误信息的文本文件名称：
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">la ligne <span style="font-weight:bold">[5]</span> du fichier <span style="font-weight:bold">[taxpayersdata.txt]</span> est erronée</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">la ligne <span style="font-weight:bold">[7]</span> du fichier <span style="font-weight:bold">[taxpayersdata.txt]</span> est erronée</span></span>
+</code></pre></div>
+
+<ul>
+  <li>第 3 行：由于某些操作可能会抛出异常，因此整个方法代码被 try / catch / finally 代码块包围；
+  </li>
+  <li>第 3–19 行：打开这三个文件。一旦打开操作失败，就会抛出异常；
+  </li>
+  <li>第 24 行：以最多 100 个字符为单位逐行读取 <b>[$data]</b> 文件（所有行长度均小于 100 个字符）；
+  </li>
+  <li>第 28 行：使用静态方法 <b>[Utilities::cutNewLineChar]</b> 移除所有换行符；
+  </li>
+  <li>第 30 行：获取读取行的三个元素；
+  </li>
+  <li>第 33–52 行：检查这三个元素的有效性。此处若发生错误，不会抛出异常，而是将错误信息写入文本文件 <b>[$errors]</b>（第 55 行）；
+  </li>
+  <li>第 59 行：如果读取的行有效，则计算税额。结果以关联数组的形式返回<b>：[&quot;tax&quot; =&gt; floor($tax), &quot;surcharge&quot; =&gt; $surcharge, &quot;discount&quot; =&gt; $discount, &quot;reduction&quot; =&gt; $reduction, &quot;rate&quot; =&gt; $rate]</b>；
+  </li>
+  <li>第 61 行：将键 <b>[married, children, salary]</b> 添加到结果中；
+  </li>
+  <li>第 61 行：将结果以 JSON 字符串的形式写入文本文件 <b>[$results]</b>；
+  </li>
+  <li>第 68–70 行：在处理 <b>[$data]</b> 文件结束时，我们检查遇到的错误行数。如果至少有一行错误，则抛出异常；
+  </li>
+  <li>第 71–74 行：捕获代码可能抛出的异常，并立即重新抛出（第 73 行）。此技巧的目的是包含第 74–79 行的 <b>[finally]</b> 代码块：无论方法的代码执行如何结束，该代码可能打开的三个文件都会被关闭。关闭未打开的文件不会引发错误；
+  </li>
+</ul>
+<p><a id="toc42690669"></a>
+<a id="refheadingtoc788132244347140"></a>
+<a id="toc42689897"></a>
+<a id="toc42690283"></a></p>
+<h2 id="87-impotswithtaxadmindatainjsonfile">8.7. <span style="color: #4f81bd">[ImpotsWithTaxAdminDataInJsonFile] 类</span></h2>
+<p>抽象类 <strong>[AbstractBaseImpots]</strong> 未实现 <strong>[InterfaceImpots]</strong> 接口中的 <strong>[getTaxAdminData]</strong> 方法。因此，我们必须在派生类中定义该方法。我们在以下派生类 <strong>[ImpotsWithTaxAdminDataInJsonFile]</strong> 中进行了此定义：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// namespace</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">namespace </span>Application;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// definition of a ImpotsWithDataInArrays class</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">class </span>ImpotsWithTaxAdminDataInJsonFile<span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">extends </span>AbstractBaseImpots<span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// a Data attribute</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#008040">private </span>$taxAdminData<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the manufacturer</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">public </span><span style="font-weight:bold;color:#7f0055">function</span> __construct(<span style="font-weight:bold;color:#7f0055">string </span>$jsonFileName) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// initialize $this-&gt;taxAdminData from file jSON</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $this-&gt;<span style="color:#0000c0">taxAdminData</span> = (<span style="font-weight:bold;color:#7f0055">new </span><span style="color:#005032">TaxAdminData</span>())-&gt;setFromJsonFile($jsonFileName);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// returns data for tax calculation</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">public </span><span style="font-weight:bold;color:#7f0055">function</span> <span style="background-color:#d4d4d4">getTaxAdminData</span>(): <span style="color:#005032">TaxAdminData</span> {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// we make the attribute [$this-&gt;taxAdminData]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#7f0055">return </span>$this-&gt;<span style="color:#0000c0">taxAdminData</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+</code></pre></div>
+
+<p><strong>评论</strong></p>
+<ul>
+  <li>第 7 行：类 <b>[ImpotsWithTaxAdminDataInJsonFile]</b> 继承自抽象类 <b>[AbstractBaseImpots]</b>。它需要定义父类未定义的方法 <b>[getTaxAdminData]</b>；
+  </li>
+  <li>第 9 行：属性 <b>[$taxAdminData] </b>将包含税务管理数据；
+  </li>
+  <li>第 12–15 行：构造函数接收的唯一参数是包含税务数据的 JSON 文件名；
+  </li>
+  <li>第 14 行：创建并初始化一个 <b>[TaxAdminData]</b> 类型的对象。此操作可能会抛出 <b>[ExceptionImpots]</b> 类型的异常。该异常将向上传播至主脚本 <b>[main.php]</b>；
+  </li>
+  <li>第 18–20 行：我们为 <b>[getTaxAdminData]</b> 方法提供了实现，该方法在父类中未被定义。此处，我们仅返回由构造函数初始化的 <b>[$this-&gt;taxAdminData]</b> 属性；
+  </li>
+</ul>
+<p><a id="toc42690670"></a>
+<a id="refheadingtoc614822007114397"></a>
+<a id="toc42689898"></a>
+<a id="toc42690284"></a></p>
+<h2 id="88-mainphp">8.8. <span style="color: #4f81bd">[main.php] 脚本</span></h2>
+<p>以下 <strong>[main.php]</strong> 脚本使用了这些类和接口：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// strict adherence to declared types of function parameters</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">declare</span>(strict_types = 1);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// namespace</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">namespace </span>Application;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// interface and class inclusion</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">require_once </span><span style="font-style:italic">__DIR__</span><span style="color:#000000"> . </span>&#x27;/InterfaceImpots.php&#x27;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">require_once </span><span style="font-style:italic">__DIR__</span><span style="color:#000000"> . </span>&quot;/TaxAdminData.php&quot;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">require_once </span><span style="font-style:italic">__DIR__</span><span style="color:#000000"> . </span>&#x27;/ExceptionImpots.php&#x27;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">require_once </span><span style="font-style:italic">__DIR__</span><span style="color:#000000"> . </span>&#x27;/Utilitaires.php&#x27;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">require_once </span><span style="font-style:italic">__DIR__</span><span style="color:#000000"> . </span>&#x27;/AbstractBaseImpots.php&#x27;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">require_once </span><span style="font-style:italic">__DIR__</span><span style="color:#000000"> . </span>&quot;/ImpotsWithTaxAdminDataInJsonFile.php&quot;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// test -----------------------------------------------------</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// definition of constants</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">const</span><span style="color:#000000"> </span><span style="font-style:italic">TAXPAYERSDATA_FILENAME</span><span style="color:#000000"> = </span>&quot;taxpayersdata.txt&quot;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">const</span><span style="color:#000000"> </span><span style="font-style:italic">RESULTS_FILENAME</span><span style="color:#000000"> = </span>&quot;resultats.txt&quot;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">const</span><span style="color:#000000"> </span><span style="font-style:italic">ERRORS_FILENAME</span><span style="color:#000000"> = </span>&quot;errors.txt&quot;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">const</span><span style="color:#000000"> </span><span style="font-style:italic">TAXADMINDATA_FILENAME</span><span style="color:#000000"> = </span>&quot;taxadmindata.json&quot;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">try <span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// create a ImpotsWithTaxAdminDataInJsonFile object</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  $impots = </span><span style="font-weight:bold;color:#7f0055">new </span>ImpotsWithTaxAdminDataInJsonFile<span style="color:#000000">(</span><span style="font-style:italic;color:#0000c0">TAXADMINDATA_FILENAME</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// we execute the tax batch</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  $impots-&gt;executeBatchImpots(</span>TAXPAYERSDATA_FILENAME<span style="color:#000000">, </span>RESULTS_FILENAME<span style="color:#000000">, </span>ERRORS_FILENAME<span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">} </span><span style="font-weight:bold;color:#7f0055">catch </span><span style="color:#000000">(</span>ExceptionImpots<span style="color:#000000"> $ex) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// error is displayed</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#7f0055">print </span>$ex-&gt;getMessage() . <span style="color:#0000c0">&quot;\n&quot;</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// end</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">print </span>&quot;Terminé\n&quot;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">exit<span style="color:#000000">();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+</code></pre></div>
+
+<p><strong>注释</strong></p>
+<ul>
+  <li>第 4 行：强制严格遵守函数参数类型；
+  </li>
+  <li>第 7 行：<b>[main.php]</b> 脚本也被置于 <b>[Application]</b> 命名空间中；
+  </li>
+  <li>第 10–15 行：我们告知 PHP 解释器脚本所使用的类和接口位于何处。请注意，此处我们未使用 <i>`use`</i> 语句来声明脚本所用类的全名。这是因为脚本和类位于同一个命名空间 <b>[Application] </b>中，因此无需如此；
+  </li>
+  <li>第 18–22 行：脚本中使用的文本文件名称；
+  </li>
+  <li>第 24–29 行：创建一个 <b>[ImpotsWithTaxAdminDataInJsonFile]</b> 对象，并处理可能出现的异常；
+  </li>
+  <li>第 28 行：执行 <b>[executeBatchImpots]</b> 方法，该方法为 <b>[TAXPAYERSDATA_FILENAME]</b> 文件中的所有纳税人计算税款。结果将保存到 <b>[RESULTS_FILENAME]</b> 文件中，任何错误将保存到 <b>[ERRORS_FILENAME]</b> 文件中；
+  </li>
+  <li>第 29–32 行：若发生致命错误，将显示错误信息；
+  </li>
+</ul>
+
+<p><strong>结果</strong></p>
+<p>假设有一个如下所示的纳税人文件 <strong>[taxpayersdata.txt]</strong>：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">oui,2,55555</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">oui,2,50000</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">oui,3,50000</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">non,2,100000</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">non,3<span style="font-weight:bold;color:#c9211e">x</span>,100000</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">oui,3,100000</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">oui,5,100000<span style="font-weight:bold;color:#c9211e">x</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">non,0,100000</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">oui,2,30000</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">non,0,200000</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">oui,3,200000</span></span>
+</code></pre></div>
+
+<p>我们得到以下错误文件 <strong>[errors.txt]</strong>：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">la ligne <span style="font-weight:bold">[5]</span> du fichier <span style="font-weight:bold">[taxpayersdata.txt]</span> est erronée</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">la ligne <span style="font-weight:bold">[7]</span> du fichier <span style="font-weight:bold">[taxpayersdata.txt]</span> est erronée</span></span>
+</code></pre></div>
+
+<p>以及以下结果文件 <strong>[resultats.txt]</strong>：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span>
+<span class="normal"><a href="#__codelineno-9-7">7</a></span>
+<span class="normal"><a href="#__codelineno-9-8">8</a></span>
+<span class="normal"><a href="#__codelineno-9-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>{&quot;marié&quot;:&quot;oui&quot;,&quot;enfants&quot;:2,&quot;salaire&quot;:55555,&quot;impôt&quot;:2814,&quot;surcôte&quot;:0,&quot;décôte&quot;:0,&quot;réduction&quot;:0,&quot;taux&quot;:0.14}
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>{&quot;marié&quot;:&quot;oui&quot;,&quot;enfants&quot;:2,&quot;salaire&quot;:50000,&quot;impôt&quot;:1384,&quot;surcôte&quot;:0,&quot;décôte&quot;:384,&quot;réduction&quot;:347,&quot;taux&quot;:0.14}
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>{&quot;marié&quot;:&quot;oui&quot;,&quot;enfants&quot;:3,&quot;salaire&quot;:50000,&quot;impôt&quot;:0,&quot;surcôte&quot;:0,&quot;décôte&quot;:720,&quot;réduction&quot;:0,&quot;taux&quot;:0.14}
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>{&quot;marié&quot;:&quot;non&quot;,&quot;enfants&quot;:2,&quot;salaire&quot;:100000,&quot;impôt&quot;:19884,&quot;surcôte&quot;:4480,&quot;décôte&quot;:0,&quot;réduction&quot;:0,&quot;taux&quot;:0.41}
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>{&quot;marié&quot;:&quot;oui&quot;,&quot;enfants&quot;:3,&quot;salaire&quot;:100000,&quot;impôt&quot;:9200,&quot;surcôte&quot;:2180,&quot;décôte&quot;:0,&quot;réduction&quot;:0,&quot;taux&quot;:0.3}
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>{&quot;marié&quot;:&quot;non&quot;,&quot;enfants&quot;:0,&quot;salaire&quot;:100000,&quot;impôt&quot;:22986,&quot;surcôte&quot;:0,&quot;décôte&quot;:0,&quot;réduction&quot;:0,&quot;taux&quot;:0.41}
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>{&quot;marié&quot;:&quot;oui&quot;,&quot;enfants&quot;:2,&quot;salaire&quot;:30000,&quot;impôt&quot;:0,&quot;surcôte&quot;:0,&quot;décôte&quot;:0,&quot;réduction&quot;:0,&quot;taux&quot;:0}
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>{&quot;marié&quot;:&quot;non&quot;,&quot;enfants&quot;:0,&quot;salaire&quot;:200000,&quot;impôt&quot;:64210,&quot;surcôte&quot;:7498,&quot;décôte&quot;:0,&quot;réduction&quot;:0,&quot;taux&quot;:0.45}
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>{&quot;marié&quot;:&quot;oui&quot;,&quot;enfants&quot;:3,&quot;salaire&quot;:200000,&quot;impôt&quot;:42842,&quot;surcôte&quot;:17283,&quot;décôte&quot;:0,&quot;réduction&quot;:0,&quot;taux&quot;:0.41}
+</code></pre></div></td></tr></table></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        本教程由 <strong>Serge Tahé</strong> 编写，根据
+<em>知识共享 署名-非商业性使用-
+ShareAlike 3.0 Unported</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
