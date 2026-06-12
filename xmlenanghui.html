@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/zh-php7-juillet-2019/php-7-uen.html">
+        <link rel="canonical" href="https://stahe.github.io/zh-php7-juillet-2019/xmlenanghui.html">
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="ingongiani---anen-10.html">
       
       
-        <link rel="next" href="aianaiauaning.html">
+        <link rel="next" href="ingongiani---i-11-an.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>1. PHP 7 入门 - 通过示例学习PHP7</title>
+        <title>21. XML文档处理 - 通过示例学习PHP7</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-php-7" class="md-skip">
+        <a href="#21-xml" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. PHP 7 入门
+              21. XML文档处理
             
           </span>
         </div>
@@ -300,54 +302,17 @@
       
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="php-7-uen.html" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1. PHP 7 入门
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="aianaiauaning.html" class="md-nav__link">
+      <a href="php-7-uanuen.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. 搭建开发环境
+    1. PHP 7 语言入门
   
 
     
@@ -367,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="php-ihu.html" class="md-nav__link">
+      <a href="onguouaningenhuang.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. PHP 基础
+    2. 工作环境的安装
   
 
     
@@ -394,14 +359,41 @@
   
   
     <li class="md-nav__item">
-      <a href="ianii---i-1-anei-2-an.html" class="md-nav__link">
+      <a href="phpeihuhihi.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. 练习题 – 第 1 版和第 2 版
+    3. PHP的基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ingongiani----i1anei2an.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 应用练习——第1版和第2版
   
 
     
@@ -502,14 +494,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ingongiani---i3an.html" class="md-nav__link">
+      <a href="ingongiani---anen-3.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. 应用练习 – 第3版
+    8. 应用练习 – 版本 3
   
 
     
@@ -556,14 +548,14 @@
   
   
     <li class="md-nav__item">
-      <a href="enengingonghengu.html" class="md-nav__link">
+      <a href="enengingong.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. 分层应用程序
+    10. 分层应用
   
 
     
@@ -583,14 +575,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ianii---i4an.html" class="md-nav__link">
+      <a href="ingongiani---anen-4.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. 练习题 – 第4版
+    11. 应用练习 – 版本 4
   
 
     
@@ -610,14 +602,14 @@
   
   
     <li class="md-nav__item">
-      <a href="hiong-mysql-huuuuaniiong.html" class="md-nav__link">
+      <a href="sgbd-ehiong-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. 使用 MySQL 数据库管理系统
+    12. SGBD 的使用 MySQL
   
 
     
@@ -637,14 +629,14 @@
   
   
     <li class="md-nav__item">
-      <a href="hiianiani----i5an.html" class="md-nav__link">
+      <a href="ingongiani---i-5-an.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. 实践练习——第5版
+    13. 应用练习 – 第 5 版
   
 
     
@@ -664,14 +656,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ingongiani---i-6-an.html" class="md-nav__link">
+      <a href="ingongiani---i6an.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. 应用练习 – 第 6 版
+    14. 应用练习 – 第6版
   
 
     
@@ -691,14 +683,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ingongiani---i7an.html" class="md-nav__link">
+      <a href="ingongiani---i-7-an.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. 应用练习 – 第7版
+    15. 应用练习 – 第 7 版
   
 
     
@@ -718,14 +710,14 @@
   
   
     <li class="md-nav__item">
-      <a href="anguoanhu.html" class="md-nav__link">
+      <a href="anguoongeng.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. 网络函数
+    16. 网络功能
   
 
     
@@ -745,14 +737,14 @@
   
   
     <li class="md-nav__item">
-      <a href="web-uu.html" class="md-nav__link">
+      <a href="webuu.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    17. Web 服务
+    17. Web服务
   
 
     
@@ -772,14 +764,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ianii---i-8-an.html" class="md-nav__link">
+      <a href="ingongiani---i-8-an.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    18. 练习题 – 第 8 版
+    18. 应用练习 – 第 8 版
   
 
     
@@ -799,14 +791,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ingongiani---i9an.html" class="md-nav__link">
+      <a href="ingongiani---i-9-an.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    19. 应用练习 – 第9版
+    19. 应用练习 – 第 9 版
   
 
     
@@ -826,14 +818,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ingonghenguiani---i-10-an.html" class="md-nav__link">
+      <a href="ingongiani---anen-10.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    20. 应用程序练习 – 第 10 版
+    20. 应用练习 – 版本 10
   
 
     
@@ -850,17 +842,26 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="hui-xml-enang.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="xmlenanghui.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    21. 处理 XML 文档
+    21. XML文档处理
   
 
     
@@ -869,6 +870,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -907,14 +909,14 @@
   
   
     <li class="md-nav__item">
-      <a href="hiianiani---i-12-an.html" class="md-nav__link">
+      <a href="ingongiani---i12an.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    23. 实践练习 – 第 12 版
+    23. 应用练习 – 第12版
   
 
     
@@ -934,14 +936,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ingongiani---i-13-an.html" class="md-nav__link">
+      <a href="ingongiani---i13an.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    24. 应用练习 – 第 13 版
+    24. 应用练习 – 第13版
   
 
     
@@ -971,60 +973,126 @@
 
 
 
-<h1 id="1-php-7">1. <span style="color: #365f91"><span style="color: #365f91">PHP 7 入门</span></span></h1>
-<p>本文档的PDF版本可在此处获取 |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQB9RUSdU7lxQLDVTJ13KW4jAVcZBFpKKDWxK6cMpXqCogE?e=hcM7ec">HERE</a>|。</p>
-<p>本文档中的示例可在此处查看 |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQD9nIGSR5MPT6iedzBw3bO5Ac9hEN7zLzy--keIvQl_XBg?e=SYNvqK">HERE</a>|。</p>
-<p>本文是四篇系列文章中的一篇：</p>
-<ol>
-<li>[<a href="https://stahe.github.io/zh-php7-juillet-2019/"><u><span style="color: #0563c1">通过示例了解 PHP 7</span></u></a>]。<strong>本文即为该系列中的当前文档</strong>；</li>
-</ol>
-<ol start="2">
-  <li>[<a href="https://stahe.github.io/zh-ecmascript6-oct-2019/"><u><span style="color: #0563c1">通过示例了解 ECMASCRIPT 6</span></u></a>]；
-  </li>
-  <li>[<a href="https://stahe.github.io/zh-vuejs-oct-2019/"><u><span style="color: #0563c1">通过示例了解 Vue.js 框架</span></u></a>]；
-  </li>
-  <li>[<a href="https://stahe.github.io/zh-nuxtjs-dec-2019/"><u><span style="color: #0563c1">NUXT.JS框架入门</span></u>]</a>；
-  </li>
-</ol>
+<p><span id="refheading400021881943603" name="refheading400021881943603" class="odt-bookmark-anchor"></span>
+<span id="toc42690868" name="toc42690868" class="odt-bookmark-anchor"></span>
+<span id="toc42690482" name="toc42690482" class="odt-bookmark-anchor"></span>
+<span id="toc42690096" name="toc42690096" class="odt-bookmark-anchor"></span></p>
+<h1 id="21-xml">21. <span style="color: #365f91">XML文档处理</span></h1>
+<p><img src="images/10000000000001C8000002BEFCF65A2E.png" width="159" height="246" style="width:4.219cm;height:6.496cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C8000002BEFCF65A2E.png" /></p>
+<p>我们考虑以下文件 XML <strong>[data.xml]</strong>：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;tribu&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;enseignant&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;personne</span><span style="color:#008080"> </span><span style="color:#808000">sexe</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">M</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#800080">&lt;nom&gt;</span><span style="color:#000000">dupont</span><span style="color:#800080">&lt;/nom&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#800080">&lt;prenom&gt;</span><span style="color:#000000">jean</span><span style="color:#800080">&lt;/prenom&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#800080">&lt;age&gt;</span><span style="color:#000000">28</span><span style="color:#800080">&lt;/age&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            ceci est un commentaire</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;/personne&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;section&gt;</span><span style="color:#000000">27</span><span style="color:#800080">&lt;/section&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/enseignant&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;etudiant&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;personne</span><span style="color:#008080"> </span><span style="color:#808000">sexe</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">F</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#800080">&lt;nom&gt;</span><span style="color:#000000">martin</span><span style="color:#800080">&lt;/nom&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#800080">&lt;prenom&gt;</span><span style="color:#000000">charline</span><span style="color:#800080">&lt;/prenom&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#800080">&lt;age&gt;</span><span style="color:#000000">22</span><span style="color:#800080">&lt;/age&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;/personne&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;formation&gt;</span><span style="color:#000000">dess IAIE</span><span style="color:#800080">&lt;/formation&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/etudiant&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;/tribu&gt;</span></span>
+</code></pre></div>
 
-<p>这些都是面向<strong>初学者的</strong>文档。文章遵循逻辑顺序，但<strong>彼此关联较为松散</strong>：</p>
+<p>我们使用以下脚本分析该文档：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 待处理的文件 XML</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$FILE_NAME</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span><span style="color:#008000">&quot;data.xml&quot;</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 处理</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$xml</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span>simplexml_load_file(<span style="color:#0000ff">$FILE_NAME</span>);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">print_r(<span style="color:#0000ff">$xml</span>);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">print_r(<span style="color:#0000ff">$xml</span>-&gt;enseignant-&gt;personne<span style="font-weight:bold">[&#x27;sexe&#x27;]</span>);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$nom</span>=<span style="color:#0000ff">$xml</span>-&gt;enseignant-&gt;personne-&gt;nom;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;nom=</span><span style="color:#0000ff">$nom</span><span style="color:#008000">\n&quot;</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$sexe</span>=<span style="color:#0000ff">$xml</span>-&gt;enseignant-&gt;personne<span style="font-weight:bold">[&#x27;sexe&#x27;]</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;sexe=</span><span style="color:#0000ff">$sexe</span><span style="color:#008000">\n&quot;</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$formation</span>=<span style="color:#0000ff">$xml</span>-&gt;etudiant-&gt;formation;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;formation=</span><span style="color:#0000ff">$formation</span><span style="color:#008000">\n&quot;</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;isset=&quot;</span>.<span style="font-weight:bold">isset</span>(<span style="color:#0000ff">$xml</span>-&gt;enseignant-&gt;personne-&gt;nom).<span style="color:#008000">&quot;\n&quot;</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;isset=&quot;</span>.<span style="font-weight:bold">isset</span>(<span style="color:#0000ff">$xml</span>-&gt;enseignant-&gt;personne-&gt;xx).<span style="color:#008000">&quot;\n&quot;</span>;</span></span>
+</code></pre></div>
+
+<p><span style="color: #000000">此处使用了一个名为 </span><strong><span style="color: #000000">[simpleXML] 的</span></strong><span style="color: #000000"> PHP 模块，该模块可用于处理 XML 文档。</span></p>
 <ul>
-  <li>文档 [1] 介绍了 PHP 7 语言。仅对 PHP 感兴趣、而不关注后续文章中涉及的 JavaScript 的读者，可在此停止阅读；
+  <li>第6行：加载文件XML；
   </li>
-  <li>文档 [2–4] 旨在为文档 [1] 中开发的税费计算服务器构建一个 JavaScript 客户端；
+  <li>第7行：显示XML文档；
   </li>
-  <li>第3和第4篇文档中涉及的JavaScript框架[Vue.js]和[Nuxt.js]需要掌握ECMAScript的最新版本，特别是第6版。因此，文档[2]主要面向不熟悉该版本JavaScript的读者。该文档引用了文档[1]中构建的税费计算服务器，因此阅读[2]的读者有时需要回溯查阅文档[1]；
+  <li>第8行：显示某位教师的<i>“</i>sexe”属性值：<i>&lt;enseignant&gt;&lt;personne sexe=&#x27;…&#x27;&gt;；</i>
   </li>
-  <li>掌握 ECMAScript 6 之后，我们可以转向 Vue.js 框架，该框架支持创建在浏览器中以单页应用（SPA）模式运行的 JavaScript 客户端。这就是文档 [3]。它既涉及文档 [1] 中构建的税务计算服务器，也涉及 [2] 中构建的独立 JavaScript 客户端代码。 因此，阅读[3]的读者有时需要参考文档[1]和[2]；
-  </li>
-  <li>一旦掌握了 Vue.js，即可进阶学习 NuxT.js 框架，该框架支持构建在浏览器中以 SSR（服务器端渲染）模式运行的 JavaScript 客户端。本文涉及文档 [1] 中构建的税费计算服务器、文档 [2] 中构建的独立 JavaScript 客户端代码，以及文档 [3] 中开发的 [vue.js] 应用程序。 因此，阅读[4]的读者有时需要参考文档[1]、[2]和[3]；
+  <li>第 9 行：显示第一个标签 <i>&lt;enseignant&gt;&lt;personne&gt;&lt;nom&gt; </i>的值<i>；</i>
   </li>
 </ul>
 
-<p>本文提供了一份涵盖多个领域（语言结构、文件访问、数据库访问和互联网网络访问）的 PHP 7 <strong>控制台脚本</strong>列表。 Web 编程通过 <strong>Web 服务</strong>进行探讨。在本文中，我们将任何生成纯文本的 Web 应用程序称为 Web 服务。这些是数据服务器，而非由 HTML、CSS 和 JavaScript 混合组成的网页服务器。我们涵盖了传统 Web 编程中同样使用的经典 Web 概念（HTTP 协议、JSON 或 XML 响应、会话管理、身份验证）。</p>
-<p>如今，以客户端/服务器模式构建 Web 应用程序已十分普遍：</p>
-<p><img src="images/100000000000082800000365F64BD6A3.png" width="626" height="261" style="width:16.572cm;height:6.897cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000082800000365F64BD6A3.png" /></p>
+<p>需要注意的是，根标签 &lt;tribu&gt; 在代码中并未出现。它可以是任何内容；</p>
+<p><strong>控制台输出</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">SimpleXMLElement Object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">(</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold">[enseignant]</span> =&gt; SimpleXMLElement Object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        (</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            <span style="font-weight:bold">[personne]</span> =&gt; SimpleXMLElement Object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                (</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                    <span style="font-weight:bold">[@attributes]</span> =&gt; Array</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                        (</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                            <span style="font-weight:bold">[sexe]</span> =&gt; M</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                        )</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                    <span style="font-weight:bold">[nom]</span> =&gt; dupont</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                    <span style="font-weight:bold">[prenom]</span> =&gt; jean</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                    <span style="font-weight:bold">[age]</span> =&gt; 28</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                )</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            <span style="font-weight:bold">[section]</span> =&gt; 27</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        )</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold">[etudiant]</span> =&gt; SimpleXMLElement Object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        (</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            <span style="font-weight:bold">[personne]</span> =&gt; SimpleXMLElement Object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                (</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                    <span style="font-weight:bold">[@attributes]</span> =&gt; Array</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                        (</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                            <span style="font-weight:bold">[sexe]</span> =&gt; F</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                        )</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                    <span style="font-weight:bold">[nom]</span> =&gt; martin</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                    <span style="font-weight:bold">[prenom]</span> =&gt; charline</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                    <span style="font-weight:bold">[age]</span> =&gt; 22</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                )</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            <span style="font-weight:bold">[formation]</span> =&gt; dess IAIE</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        )</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">SimpleXMLElement Object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">(</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold">[0]</span> =&gt; M</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">nom=dupont</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">sexe=M</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">formation=dess IAIE</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">isset=1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">isset=</span></span>
+</code></pre></div>
+
 <ul>
-  <li>在<b>[1]</b>中，Web浏览器会显示面向用户的网页<b>[5, 7]</b>。这些网页包含JavaScript代码，用于实现数据Web服务<b>[2]</b>的客户端以及网页片段服务器<b>[3]</b>的客户端。该领域中一个成熟的JS框架是<b>谷歌的Angular 2</b>（2019年5月）；
-  </li>
-  <li>在<b>[2]</b>中，Web服务器即为数据服务器。它可以使用任何编程语言编写。除首次加载外，它不会生成传统意义上的网页（HTML、CSS、JavaScript）。但该初始页面可从传统Web服务器<b>[3]</b>（而非数据服务器）获取。 随后，初始页面上的 JavaScript 将通过从充当数据服务器的 Web 服务器 <b>[2]</b> 检索待显示的数据 <b>[4]</b>，来生成应用程序的各个网页。它还可以从网页服务器 <b>[3]</b> 检索网页片段 <b>[5] </b>以对这些数据进行格式化；
-  </li>
-  <li>在<b>[4]</b>中，用户发起操作；
-  </li>
-  <li>在<b>[6,7]</b>中：用户接收由网页片段格式化的数据；
+  <li>第 1-37 行：XML 文档以 <b>[simpleXML]</b> 类型对象的形式呈现。
   </li>
 </ul>
 
-<p>在本文中，我们将使用 PHP 7 编写具有以下结构的客户端/服务器应用程序：</p>
-<p><img src="images/10000000000006A800000291FCA421D9.png" width="596" height="230" style="width:15.782cm;height:6.085cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006A800000291FCA421D9.png" /></p>
-<p>这里是一个用 PHP 编写的客户端/服务器应用程序。一个控制台脚本 <strong>[9]</strong> 将向数据服务器 <strong>[4]</strong> 发起查询。在此编写数据服务所获得的知识可复用于 Web 应用程序中。PHP 数据服务可以保留，而 PHP 客户端将被 JavaScript 客户端所取代。</p>
-<p>作为本文的核心主题，我们将构建一个包含13个版本的税费计算服务。第13版将采用以下架构：</p>
-<p><img src="images/100000000000072E0000021F81624F47.png" width="643" height="190" style="width:17.022cm;height:5.029cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000072E0000021F81624F47.png" /></p>
-<p>服务器的<strong>[Web]</strong>层将采用MVC（模型-视图-控制器）架构。整个PHP 7课程的目标就是构建此版本。</p>
-<p>本文档中的脚本均附有注释，并重现了其控制台输出结果。必要时会提供补充说明。阅读本文档需要主动思考：要理解一个脚本，必须阅读其代码、注释和执行结果。</p>
-<p>本文档中的示例可<strong>在此处</strong>获取。</p>
-<p>文档的 PDF 版本可<strong>在此处</strong>获取。</p>
-<p>Serge Tahé，2019年7月</p>
+<p>前面的脚本并未展示 <strong>[simpleXML]</strong> 模块的所有功能，但足以让我们编写该应用练习的新版本。</p>
 
 
 

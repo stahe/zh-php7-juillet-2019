@@ -12,25 +12,29 @@
         <meta name="author" content="Serge Tahé">
       
       
+        <link rel="canonical" href="https://stahe.github.io/zh-php7-juillet-2019/ingongiani---i13an.html">
+      
+      
+        <link rel="prev" href="ingongiani---i12an.html">
       
       
       
         
       
       
-      <link rel="icon" href="/zh-php7-juillet-2019/assets/images/favicon.png">
+      <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>通过示例学习PHP7</title>
+        <title>24. 应用练习 – 第13版 - 通过示例学习PHP7</title>
       
     
     
-      <link rel="stylesheet" href="/zh-php7-juillet-2019/assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="/zh-php7-juillet-2019/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,11 +53,11 @@
       
     
     
-      <link rel="stylesheet" href="/zh-php7-juillet-2019/stylesheets/focus.css">
+      <link rel="stylesheet" href="stylesheets/focus.css">
     
-      <link rel="stylesheet" href="/zh-php7-juillet-2019/stylesheets/bidi.css">
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
-    <script>__md_scope=new URL("/zh-php7-juillet-2019/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
@@ -87,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#24-13" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -99,7 +108,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/zh-php7-juillet-2019/index.html" title="通过示例学习PHP7" class="md-header__button md-logo" aria-label="通过示例学习PHP7" data-md-component="logo">
+    <a href="index.html" title="通过示例学习PHP7" class="md-header__button md-logo" aria-label="通过示例学习PHP7" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -119,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              24. 应用练习 – 第13版
             
           </span>
         </div>
@@ -237,7 +246,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/zh-php7-juillet-2019/index.html" title="通过示例学习PHP7" class="md-nav__button md-logo" aria-label="通过示例学习PHP7" data-md-component="logo">
+    <a href="index.html" title="通过示例学习PHP7" class="md-nav__button md-logo" aria-label="通过示例学习PHP7" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -267,7 +276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/index.html" class="md-nav__link">
+      <a href="index.html" class="md-nav__link">
         
   
   
@@ -294,7 +303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/php-7-uanuen.html" class="md-nav__link">
+      <a href="php-7-uanuen.html" class="md-nav__link">
         
   
   
@@ -321,7 +330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/onguouaningenhuang.html" class="md-nav__link">
+      <a href="onguouaningenhuang.html" class="md-nav__link">
         
   
   
@@ -348,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/phpeihuhihi.html" class="md-nav__link">
+      <a href="phpeihuhihi.html" class="md-nav__link">
         
   
   
@@ -375,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/ingongiani----i1anei2an.html" class="md-nav__link">
+      <a href="ingongiani----i1anei2an.html" class="md-nav__link">
         
   
   
@@ -402,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/ei.html" class="md-nav__link">
+      <a href="ei.html" class="md-nav__link">
         
   
   
@@ -429,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/ieou.html" class="md-nav__link">
+      <a href="ieou.html" class="md-nav__link">
         
   
   
@@ -456,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/ihanguuou.html" class="md-nav__link">
+      <a href="ihanguuou.html" class="md-nav__link">
         
   
   
@@ -483,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/ingongiani---anen-3.html" class="md-nav__link">
+      <a href="ingongiani---anen-3.html" class="md-nav__link">
         
   
   
@@ -510,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/ehi.html" class="md-nav__link">
+      <a href="ehi.html" class="md-nav__link">
         
   
   
@@ -537,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/enengingong.html" class="md-nav__link">
+      <a href="enengingong.html" class="md-nav__link">
         
   
   
@@ -564,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/ingongiani---anen-4.html" class="md-nav__link">
+      <a href="ingongiani---anen-4.html" class="md-nav__link">
         
   
   
@@ -591,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/sgbd-ehiong-mysql.html" class="md-nav__link">
+      <a href="sgbd-ehiong-mysql.html" class="md-nav__link">
         
   
   
@@ -618,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/ingongiani---i-5-an.html" class="md-nav__link">
+      <a href="ingongiani---i-5-an.html" class="md-nav__link">
         
   
   
@@ -645,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/ingongiani---i6an.html" class="md-nav__link">
+      <a href="ingongiani---i6an.html" class="md-nav__link">
         
   
   
@@ -672,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/ingongiani---i-7-an.html" class="md-nav__link">
+      <a href="ingongiani---i-7-an.html" class="md-nav__link">
         
   
   
@@ -699,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/anguoongeng.html" class="md-nav__link">
+      <a href="anguoongeng.html" class="md-nav__link">
         
   
   
@@ -726,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/webuu.html" class="md-nav__link">
+      <a href="webuu.html" class="md-nav__link">
         
   
   
@@ -753,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/ingongiani---i-8-an.html" class="md-nav__link">
+      <a href="ingongiani---i-8-an.html" class="md-nav__link">
         
   
   
@@ -780,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/ingongiani---i-9-an.html" class="md-nav__link">
+      <a href="ingongiani---i-9-an.html" class="md-nav__link">
         
   
   
@@ -807,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/ingongiani---anen-10.html" class="md-nav__link">
+      <a href="ingongiani---anen-10.html" class="md-nav__link">
         
   
   
@@ -834,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/xmlenanghui.html" class="md-nav__link">
+      <a href="xmlenanghui.html" class="md-nav__link">
         
   
   
@@ -861,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/ingongiani---i-11-an.html" class="md-nav__link">
+      <a href="ingongiani---i-11-an.html" class="md-nav__link">
         
   
   
@@ -888,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/ingongiani---i12an.html" class="md-nav__link">
+      <a href="ingongiani---i12an.html" class="md-nav__link">
         
   
   
@@ -912,10 +921,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/zh-php7-juillet-2019/ingongiani---i13an.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="ingongiani---i13an.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -931,6 +949,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -948,8 +967,62 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<p><span id="refheadingtoc19179436505072" name="refheadingtoc19179436505072" class="odt-bookmark-anchor"></span>
+<span id="toc42690963" name="toc42690963" class="odt-bookmark-anchor"></span>
+<span id="toc42690577" name="toc42690577" class="odt-bookmark-anchor"></span>
+<span id="toc42690191" name="toc42690191" class="odt-bookmark-anchor"></span></p>
+<h1 id="24-13">24. <span style="color: #365f91">应用练习 – 第13版</span></h1>
+<p>第13版变化不大：它加强了应用程序文件的访问安全性。</p>
+<p>在第12版中，可以请求以下URL：URL，从而获得以下页面（Firefox）：</p>
+<p><img src="images/10000000000006580000045C9B48B366.png" width="487" height="335" style="width:12.891cm;height:8.858cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006580000045C9B48B366.png" /></p>
+<p>然而，该文件 <strong>[config.json]</strong> 包含敏感信息，例如获准使用该应用程序的用户凭证。该文件不应被用户访问。除 <strong>[main.php, index.php, Views/logo.jpg]</strong> 文件外，应用程序中的所有文件均应遵循此原则，而 [main.php, index.php, Views/logo.jpg] 文件则必须允许外部访问。 实际上，视图需要访问应用程序的徽标（HTTP）。第 13 版提供了一个解决此问题的简单方案。</p>
+<p>在 NetBeans 中，我们将 <strong>[version-12]</strong> 文件夹复制并粘贴到 <strong>[version-13]</strong> 中：</p>
+<p><img src="images/10000000000002EC000002AEA4603D04.png" width="262" height="240" style="width:6.93cm;height:6.357cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002EC000002AEA4603D04.png" /></p>
+<ul>
+  <li>在应用程序根目录下的 <b>[1]</b> 文件夹中，仅保留 <b>[index.php, main.php]</b> 脚本；
+  </li>
+  <li>在 <b>[2] </b>中，配置文件被放置在 <b>[Config]</b> 文件夹中；
+  </li>
+  <li>在 <b>[3] </b>中，将 <b>[logo.jpg]</b> 镜像放置在 <b>[Resources]</b> 文件夹中；
+  </li>
+</ul>
+
+<p>此处使用的 HTTP 服务器是一台 Apache 服务器。该服务器允许通过 <strong>[.htaccess]</strong> 文件控制对某个文件夹的访问。 对于所有希望通过 URL 禁止直接访问的文件夹，我们需要创建如下 <strong>[.htaccess]</strong> 文件：</p>
+<p><img src="images/10000000000001D6000000E31188E69B.png" width="164" height="79" style="width:4.352cm;height:2.101cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001D6000000E31188E69B.png" /></p>
+<p>这两行配置将禁止任何人访问该文件夹。</p>
+<p>我们将此文件放置在应用程序的所有文件夹中，但根目录和 <strong>[Resources]</strong> 文件夹除外。最终，只有三个文件可从外部访问：<strong>[index.php, main.php, Resources/logo.jpg]</strong>。</p>
+<p>让我们进行一些测试：</p>
+<p><img src="images/10000000000005920000018FB6DCE398.png" width="428" height="120" style="width:11.321cm;height:3.168cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005920000018FB6DCE398.png" /></p>
+<p><img src="images/10000000000005A100000182C1122D08.png" width="432" height="116" style="width:11.441cm;height:3.066cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005A100000182C1122D08.png" /></p>
+<p><img src="images/10000000000004F1000001F154479962.png" width="380" height="149" style="width:10.042cm;height:3.946cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004F1000001F154479962.png" /></p>
+<p><img src="images/10000000000007AE000001896A5FFAC4.png" width="590" height="118" style="width:15.61cm;height:3.12cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007AE000001896A5FFAC4.png" /></p>
+<p><img src="images/1000000000000785000004EF0895F026.png" width="578" height="379" style="width:15.281cm;height:10.026cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000785000004EF0895F026.png" /></p>
+<p>代码中需要进行一些修改：</p>
+<p>在文件 <strong>[Config/config.json]</strong> 中：</p>
+<p><img src="images/10000000000005FD0000015815E67B6D.png" width="460" height="103" style="width:12.173cm;height:2.731cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005FD0000015815E67B6D.png" /></p>
+<p>在文件 <strong>[main.php]</strong> 中：</p>
+<p><img src="images/10000000000003E00000012AB07990C0.png" width="297" height="89" style="width:7.87cm;height:2.364cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003E00000012AB07990C0.png" /></p>
+<p>在文件 <strong>[Views/v-bandeau.php]</strong> 中：</p>
+<p><img src="images/100000000000054D000001F996BE412E.png" width="407" height="151" style="width:10.77cm;height:4.008cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000054D000001F996BE412E.png" /></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
               </article>
             </div>
           
@@ -992,12 +1065,12 @@ ShareAlike 3.0 Unported</em>.
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/zh-php7-juillet-2019/", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "/zh-php7-juillet-2019/assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/zh-php7-juillet-2019/assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="/zh-php7-juillet-2019/javascripts/focus.js"></script>
+        <script src="javascripts/focus.js"></script>
       
     
   </body>
